@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Flicks/TopRatedTableViewCell.swift">
+   </FileRef>
+   <FileRef
       location = "group:Flicks.xcodeproj">
    </FileRef>
    <FileRef

@@ -33,7 +33,6 @@ class TopRatedTableViewController: UITableViewController {
         
         //self.tableView.rowHeight = 300
         self.tableView.delegate = self
-        self.errorView.isHidden = true
     }
     
     func refreshControlAction(refreshControl: UIRefreshControl) {
@@ -65,11 +64,12 @@ class TopRatedTableViewController: UITableViewController {
                 
                 print("error")
                 
-                
+                /*
                 for case let label as UILabel in self.errorView.subviews {
                     label.text = "Network Error"
                     self.errorView.isHidden = false
                 }
+                */
                 
             }
             
@@ -77,7 +77,7 @@ class TopRatedTableViewController: UITableViewController {
                 if let responseDictionary = try! JSONSerialization.jsonObject(with: data, options:[]) as? NSDictionary {
                     NSLog("response: \(responseDictionary)")
                     
-                    self.errorView.isHidden = true
+                    //self.errorView.isHidden = true
                     
                     
                     if let flicksDict = responseDictionary.value(forKey: "results") as? [NSDictionary] {
@@ -164,7 +164,7 @@ class TopRatedTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NowPlayingTableViewCell", for: indexPath) as! NowPlayingTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TopRatedTableViewCell", for: indexPath) as! TopRatedTableViewCell
         
         // Configure the cell...
         let flickModel = Flicks[indexPath.row]

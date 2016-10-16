@@ -33,10 +33,10 @@
                                 <rect key="frame" x="0.0" y="124" width="375" height="230"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3cG-oJ-35T" id="TLt-Na-eKk">
-                                    <frame key="frameInset" width="341" height="229.5"/>
+                                    <frame key="frameInset" width="342" height="229.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yYq-l6-ERJ">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yYq-l6-ERJ">
                                             <frame key="frameInset" minX="146" minY="17" width="196" height="35"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
@@ -44,7 +44,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="overview" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SQB-WE-6Zb">
-                                            <frame key="frameInset" minX="146" minY="60" width="196" height="21"/>
+                                            <frame key="frameInset" minX="146" minY="49" width="196" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="textColor"/>
@@ -65,7 +65,9 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Snc-dP-9GH"/>
+                    <navigationItem key="navigationItem" title="Now Playing" id="m5A-ty-HOo">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="eiD-Yl-8WU"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="errorView" destination="sGh-jY-lYm" id="Dti-9D-duo"/>
                     </connections>
@@ -140,18 +142,18 @@
                     </tabBar>
                     <connections>
                         <segue destination="7Ny-9p-Jid" kind="relationship" relationship="viewControllers" id="SRS-n8-RDj"/>
-                        <segue destination="d1p-a1-Jcx" kind="relationship" relationship="viewControllers" id="ln5-3v-hRZ"/>
+                        <segue destination="CUa-JQ-JP5" kind="relationship" relationship="viewControllers" id="ln5-3v-hRZ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ObJ-h6-KJd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="86" y="-198"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation Bar-->
         <scene sceneID="bEo-1W-Yix">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Ny-9p-Jid" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="JNZ-eb-8sz"/>
+                <navigationController title="Navigation Bar" automaticallyAdjustsScrollViewInsets="NO" id="7Ny-9p-Jid" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" systemItem="mostRecent" id="JNZ-eb-8sz"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="YLs-I2-Txw"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wMt-5Y-m4d">
@@ -170,21 +172,21 @@
         <!--Top Rated-->
         <scene sceneID="dRr-KH-X3S">
             <objects>
-                <tableViewController title="Top Rated" id="d1p-a1-Jcx" customClass="TopRatedTableViewController" sceneMemberID="viewController">
+                <tableViewController title="Top Rated" id="d1p-a1-Jcx" customClass="TopRatedTableViewController" customModule="Flicks" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="230" sectionHeaderHeight="28" sectionFooterHeight="28" id="Yoi-1I-60g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopRatedTableViewCell" id="rzj-3b-aGa">
-                                <rect key="frame" x="0.0" y="28" width="375" height="230"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TopRatedTableViewCell" id="rzj-3b-aGa" customClass="TopRatedTableViewCell" customModule="Flicks" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="230"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rzj-3b-aGa" id="Bdg-p9-wuN">
-                                    <frame key="frameInset" width="375" height="229.5"/>
+                                    <frame key="frameInset" width="341" height="229.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="overview" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KOg-D8-oCg">
-                                            <frame key="frameInset" minX="146" minY="54" width="221" height="21"/>
+                                            <frame key="frameInset" minX="146" minY="44" width="221" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="textColor"/>
@@ -194,8 +196,8 @@
                                             <frame key="frameInset" minX="8" minY="14" width="130" height="200"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="skF-GK-8Ms">
-                                            <frame key="frameInset" minX="146" minY="14" width="212" height="35"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="skF-GK-8Ms">
+                                            <frame key="frameInset" minX="146" minY="12" width="212" height="38"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                             <nil key="textColor"/>
@@ -203,6 +205,12 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="flickDescTextView" destination="KOg-D8-oCg" id="yU5-TH-9d6"/>
+                                    <outlet property="flickImageView" destination="dTs-H4-eqP" id="GuS-uo-746"/>
+                                    <outlet property="flickTitleLabel" destination="skF-GK-8Ms" id="aje-nO-zEq"/>
+                                    <segue destination="1Ea-m6-FfH" kind="push" id="ive-6A-aTZ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -210,9 +218,30 @@
                             <outlet property="delegate" destination="d1p-a1-Jcx" id="so3-Rj-oqQ"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" systemItem="topRated" id="Ddu-lo-dkb"/>
+                    <navigationItem key="navigationItem" title="Top Rated" id="D1P-xd-z5x">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="b3F-5j-fYG"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ae-SD-I18" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1398.5" y="192.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VjT-iy-gqo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CUa-JQ-JP5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" systemItem="topRated" id="Ddu-lo-dkb"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1KC-J0-e2A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="d1p-a1-Jcx" kind="relationship" relationship="rootViewController" id="DbG-cW-QMv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gxb-lZ-Ws3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="811.5" y="192.5"/>
         </scene>
@@ -222,4 +251,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="vhB-1Q-c93"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -18,7 +18,7 @@
 		1B14FF901DB3041F0048D953 /* NowPlayingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B14FF8F1DB3041F0048D953 /* NowPlayingTableViewController.swift */; };
 		1B14FF921DB304B30048D953 /* NowPlayingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B14FF911DB304B30048D953 /* NowPlayingTableViewCell.swift */; };
 		1B14FF941DB305550048D953 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1B14FF931DB305550048D953 /* Podfile */; };
-		1BCF90E31DB4343600B7521A /* TopRatedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF90E21DB4343600B7521A /* TopRatedTableViewCell.swift */; };
+		1B54F5C41DB43B9E00D57D2C /* TopRatedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B54F5C31DB43B9E00D57D2C /* TopRatedTableViewCell.swift */; };
 		1BCF90E51DB4378400B7521A /* TopRatedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCF90E41DB4378400B7521A /* TopRatedTableViewController.swift */; };
 		1BF475301DB3069500AAD6CB /* Flick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4752F1DB3069500AAD6CB /* Flick.swift */; };
 		58DC657CDC652BCDE08998D6 /* Pods_FlicksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3609DF4DF7E6864B832B724D /* Pods_FlicksUITests.framework */; };
@@ -63,7 +63,7 @@
 		1B14FF8F1DB3041F0048D953 /* NowPlayingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowPlayingTableViewController.swift; sourceTree = "<group>"; };
 		1B14FF911DB304B30048D953 /* NowPlayingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowPlayingTableViewCell.swift; sourceTree = "<group>"; };
 		1B14FF931DB305550048D953 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		1BCF90E21DB4343600B7521A /* TopRatedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopRatedTableViewCell.swift; sourceTree = "<group>"; };
+		1B54F5C31DB43B9E00D57D2C /* TopRatedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopRatedTableViewCell.swift; sourceTree = "<group>"; };
 		1BCF90E41DB4378400B7521A /* TopRatedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopRatedTableViewController.swift; sourceTree = "<group>"; };
 		1BF4752F1DB3069500AAD6CB /* Flick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flick.swift; sourceTree = "<group>"; };
 		3609DF4DF7E6864B832B724D /* Pods_FlicksUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlicksUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,8 +162,8 @@
 		1B2696C01DB3D9DD00EEB973 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				1B54F5C31DB43B9E00D57D2C /* TopRatedTableViewCell.swift */,
 				1B14FF911DB304B30048D953 /* NowPlayingTableViewCell.swift */,
-				1BCF90E21DB4343600B7521A /* TopRatedTableViewCell.swift */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -480,9 +480,9 @@
 				1B14FF621DB3030E0048D953 /* AppDelegate.swift in Sources */,
 				1BCF90E51DB4378400B7521A /* TopRatedTableViewController.swift in Sources */,
 				1B14FF901DB3041F0048D953 /* NowPlayingTableViewController.swift in Sources */,
+				1B54F5C41DB43B9E00D57D2C /* TopRatedTableViewCell.swift in Sources */,
 				1BF475301DB3069500AAD6CB /* Flick.swift in Sources */,
 				1B14FF921DB304B30048D953 /* NowPlayingTableViewCell.swift in Sources */,
-				1BCF90E31DB4343600B7521A /* TopRatedTableViewCell.swift in Sources */,
 				1B0A43E31DB35A0C0084E526 /* NowPlayingDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
