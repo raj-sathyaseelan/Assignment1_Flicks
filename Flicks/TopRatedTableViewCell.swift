@@ -1,0 +1,30 @@
+//
+//  TopRatedTableViewCell
+//  Flicks
+//
+//  Created by Raj Sathyaseelan on 10/16/16.
+//  Copyright © 2016 Token. All rights reserved.
+//
+
+import UIKit
+
+class TopRatedTableViewCell: UITableViewCell {
+    
+    
+    @IBOutlet weak var flickImageView: UIImageView!
+    @IBOutlet weak var flickTitleLabel: UILabel!
+    @IBOutlet weak var flickDescTextView: UILabel!
+    
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        // Configure the view for the selected state
+    }
+    
+}
