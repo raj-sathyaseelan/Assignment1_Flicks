@@ -12,7 +12,7 @@ class NowPlayingTableViewCell: UITableViewCell {
     
     @IBOutlet weak var flickImageView: UIImageView!
     @IBOutlet weak var flickTitleLabel: UILabel!    
-    @IBOutlet weak var flickDescTextView: UITextView!
+    @IBOutlet weak var flickDescTextView: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

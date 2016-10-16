@@ -11,19 +11,26 @@ import UIKit
 class Flick {
     
     var title = "No Title"
-    var posterPath: String = ""
+    var posterPath: String!
     
     var posterPathLowRes: String! {
         get {
-            return "https://image.tmdb.org/t/p/w45\(self.posterPath)"
+            
+            return "https://image.tmdb.org/t/p/w45\(self.posterPath!)"
         }
         
     }
     
     var posterPathHighRes: String! {
         get {
-            return "https://image.tmdb.org/t/p/original\(self.posterPath)"
-
+            
+            if self.posterPath != nil {
+                print("https://image.tmdb.org/t/p/original\(self.posterPath!)")
+                return "https://image.tmdb.org/t/p/original\(self.posterPath!)"
+            } else {
+                return ""
+            }
+            
         }
     }
 

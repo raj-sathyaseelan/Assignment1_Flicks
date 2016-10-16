@@ -60,7 +60,7 @@
 		1B14FF831DB3030E0048D953 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B14FF8F1DB3041F0048D953 /* NowPlayingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowPlayingTableViewController.swift; sourceTree = "<group>"; };
 		1B14FF911DB304B30048D953 /* NowPlayingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowPlayingTableViewCell.swift; sourceTree = "<group>"; };
-		1B14FF931DB305550048D953 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		1B14FF931DB305550048D953 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1BF4752F1DB3069500AAD6CB /* Flick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flick.swift; sourceTree = "<group>"; };
 		3609DF4DF7E6864B832B724D /* Pods_FlicksUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlicksUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74AFD74FCF0B5B60094944ED /* Pods-FlicksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlicksUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlicksUITests/Pods-FlicksUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,16 +124,14 @@
 		1B14FF601DB3030E0048D953 /* Flicks */ = {
 			isa = PBXGroup;
 			children = (
+				1B2696C21DB3D9EF00EEB973 /* controllers */,
+				1B2696C11DB3D9E400EEB973 /* models */,
+				1B2696C01DB3D9DD00EEB973 /* views */,
 				1B14FF611DB3030E0048D953 /* AppDelegate.swift */,
-				1B14FF631DB3030E0048D953 /* ViewController.swift */,
 				1B14FF651DB3030E0048D953 /* Main.storyboard */,
-				1B0A43E21DB35A0C0084E526 /* NowPlayingDetailViewController.swift */,
 				1B14FF681DB3030E0048D953 /* Assets.xcassets */,
 				1B14FF6A1DB3030E0048D953 /* LaunchScreen.storyboard */,
 				1B14FF6D1DB3030E0048D953 /* Info.plist */,
-				1B14FF8F1DB3041F0048D953 /* NowPlayingTableViewController.swift */,
-				1B14FF911DB304B30048D953 /* NowPlayingTableViewCell.swift */,
-				1BF4752F1DB3069500AAD6CB /* Flick.swift */,
 				1B14FF931DB305550048D953 /* Podfile */,
 			);
 			path = Flicks;
@@ -155,6 +153,32 @@
 				1B14FF831DB3030E0048D953 /* Info.plist */,
 			);
 			path = FlicksUITests;
+			sourceTree = "<group>";
+		};
+		1B2696C01DB3D9DD00EEB973 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				1B14FF911DB304B30048D953 /* NowPlayingTableViewCell.swift */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		1B2696C11DB3D9E400EEB973 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				1BF4752F1DB3069500AAD6CB /* Flick.swift */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		1B2696C21DB3D9EF00EEB973 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1B0A43E21DB35A0C0084E526 /* NowPlayingDetailViewController.swift */,
+				1B14FF8F1DB3041F0048D953 /* NowPlayingTableViewController.swift */,
+				1B14FF631DB3030E0048D953 /* ViewController.swift */,
+			);
+			name = controllers;
 			sourceTree = "<group>";
 		};
 		9756C0476F7331E00EC9C41C /* Pods */ = {

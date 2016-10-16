@@ -8,11 +8,14 @@
 
 import UIKit
 import AFNetworking
+import VHUD
 
 class NowPlayingTableViewController: UITableViewController {
     
     
     var Flicks = [Flick]()
+    
+    @IBOutlet weak var errorView: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,11 +26,17 @@ class NowPlayingTableViewController: UITableViewController {
         refreshControl.addTarget(self.tableView, action: #selector(refreshTableView(refreshControl:)), for: UIControlEvents.valueChanged)
         refreshTableView(refreshControl: refreshControl)
         
-        self.tableView.rowHeight = 200
+        //self.tableView.rowHeight = 300
         self.tableView.delegate = self
     }
     
     func refreshTableView(refreshControl: UIRefreshControl) {
+        
+        var content = VHUDContent(.loop(3.0))
+        content.loadingText = "Loading.."
+        content.completionText = "Finish!"
+        
+        VHUD.show(content)
         
         let clientId = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
         let baseURL = "https://api.themoviedb.org/3/movie/now_playing?api_key=\(clientId)"
@@ -48,6 +57,7 @@ class NowPlayingTableViewController: UITableViewController {
             if error != nil {
                 print(error!.localizedDescription)
                 print("error")
+                
             }
             
             if let data = dataOrNil {
@@ -56,8 +66,6 @@ class NowPlayingTableViewController: UITableViewController {
                     
                     
                     if let flicksDict = responseDictionary.value(forKey: "results") as? [NSDictionary] {
-                        
-                        
                             
                             for flick in flicksDict {
                                 
@@ -103,10 +111,7 @@ class NowPlayingTableViewController: UITableViewController {
                                 
                             }
                             
-                            
                         
-                        
-
                     }
                     
                     
@@ -117,6 +122,7 @@ class NowPlayingTableViewController: UITableViewController {
             
             self.tableView.reloadData()
             refreshControl.endRefreshing()
+            VHUD.dismiss(1.0, 1.0)
             
         });
         
@@ -141,23 +147,24 @@ class NowPlayingTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return Flicks.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NowPlayingTableViewCell", for: indexPath) as! NowPlayingTableViewCell
 
         // Configure the cell...
         let flickModel = Flicks[indexPath.row]
+        let post = flickModel.posterPathHighRes
         
-        if let posterPath = flickModel.posterPathHighRes as? String {
-            cell.flickImageView.setImageWith(URL(string: posterPath)!)
+        if  post!.isEmpty {
+            cell.flickImageView.image = nil
         }
         else {
-            cell.flickImageView.image = nil
+            cell.flickImageView.setImageWith(URL(string: post!)!)
         }
         
         cell.flickTitleLabel.text = flickModel.originalTitle
         cell.flickDescTextView.text = flickModel.overview
+        cell.flickDescTextView.sizeToFit()
         return cell
     }
     
@@ -198,12 +205,27 @@ class NowPlayingTableViewController: UITableViewController {
 
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        let np = segue.destination as! NowPlayingDetailViewController
+        let index = self.tableView.indexPath(for: sender as! UITableViewCell)
+        
+        if let row = index?.row {
+            
+            //to fix the row path
+            np.flick = Flicks[(row)]
+        }
+        
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        self.tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
 
 }
