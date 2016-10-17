@@ -1,36 +1,60 @@
-# Assignment1_Flicks
 
-This is an iOS demo application for displaying the latest box office movies using the [RottenTomatoes API](http://www.rottentomatoes.com/). See the [RottenTomatoes Networking Tutorial](https://github.com/codepath/android_guides/wiki/Rotten-Tomatoes-Networking-Tutorial) on our cliffnotes for a step-by-step tutorial.
+# Project 1 - Flicks
 
-Time spent: 10 hours spent in total
+**Flicks** is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Completed user stories:
+Time spent: **8** hours spent in total
 
- * [x] Required: User can view a list of movies currently playing in theatres from the Movie Database with poster images loading asyncrhonously using AFNetworking. title, cast and tomatoes rating
- * [x] Required: User can click on a movie in the list to bring up a details page with additional information such as synopsis
- * [x] Optional: Placeholder image is used for movie posters loaded in from the network
- 
-Notes:
+## User Stories
 
-The following user stories must be completed:
+The following **required** functionality is completed:
 
-User can view a list of movies currently playing in theaters from The Movie Database. Poster images must be loaded
+- [x] User can view a list of movies currently playing in theaters. Poster images load asynchronously.
+- [x] User can view movie details by tapping on a cell.
+- [x] User sees loading state while waiting for the API.
+- [x] User sees an error message when there is a network error.
+- [x] User can pull to refresh the movie list.
 
-User sees loading state while waiting for movies API. You can use one of the 3rd party libraries listed on CocoaControls.
-User sees an error message when there's a networking error. You may not use UIAlertController or a 3rd party library to display the error. See this screenshot for what the error message should look like.
-Hint: Using the hidden property of a view can be helpful to toggle the network error view's visibility.
-Hint: You can simulate a network error, by turning off the wifi on your computer before running the simulator. You will also want to Reset Content and Settings in your simulator (Found under the Simulator drop down menu) before you run the app, otherwise the images will be fetched from the cache instead of the network. The setImageWithURL method stores images in cache automatically behind the scenes.
-User can pull to refresh the movie list.
-The following advanced user stories are optional: (high, med, and low refer to the effort to implement the feature, with high being the most work and low being the least)
+The following **optional** features are implemented:
 
-Add a tab bar for Now Playing or Top Rated movies. (high)
+- [x] Add a tab bar for **Now Playing** and **Top Rated** movies.
+- [ ] Implement segmented control to switch between list view and grid view.
+- [ ] Add a search bar.
+- [ ] All images fade in.
+- [ ] For the large poster, load the low-res image first, switch to high-res when complete.
+- [ ] Customize the highlight and selection effect of the cell.
+- [ ] Customize the navigation bar.
 
-Hint: If you are using a storyboard for your app, there isn't a good way to use the same UIViewController for each tab of your UITabBarController. Instead, you might want to use a xib approach for each UIViewController and set up your tab bar programmatically.
+The following **additional** features are implemented:
 
-Spent some time making the UI work across multiple phone resolutions by playing around with the RelativeLayout.
+- [ ] List anything else that you can get done to improve the app functionality!
 
-Walkthrough of all user stories:
+## Video Walkthrough
 
-![Video Walkthrough](anim_rotten_tomatoes.gif)
+Here's a walkthrough of implemented user stories:
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/)
+<img src='Flicks_demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
+## Notes
+
+Describe any challenges encountered while building the app.
+1. Pull to refresh #selector method call was not working.
+2. UI Alignment was so difficult with autolayout
+
+## License
+
+Copyright [yyyy] [name of copyright owner]
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
